@@ -414,10 +414,10 @@
                             <div class="col-lg-8">
                                 <div class="modal-body">
                                     <!-- Project Details Go Here-->
-                                    <h2 class="text-uppercase">Power Distribution</h2>
+                                    <h2 class="text-uppercase">Power Distribution</h2><br/>
 <!--                                     <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p> -->
 <!--                                     <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/01-full.jpg" alt="" /> -->
-                                    <p>We designed a voltage regulator circuit to provide our various circuits, sensors, and actuators with the appropraite voltages. We used 9V batteries for circuits with low current demand. For high current circuits like our H-bridges and servo motors we used 6 AA batteries in series to create a 9V power source.</p><br/>
+                                    <p>We designed a voltage regulator circuit to provide our various circuits, sensors, and actuators with the appropraite voltages. We used 9V batteries for circuits with low current demand. For high current circuits like our H-bridges and servo motors we used 6 AA batteries in series to create a 9V power source. This circuit was built on the same board as our microcontroller.</p><br/>
                                     <img class="img-fluid d-block mx-auto" src="assets/img/regulator.jpg" alt="" /> <br/>
                                 <p>This is an approximate power and ground diagram for all of our robot's systems. </p>
                                     <img class="img-fluid d-block mx-auto" src="assets/img/powerGND.jpg" alt="" /> <br/>
@@ -447,18 +447,19 @@
                             <div class="col-lg-8">
                                 <div class="modal-body">
                                     <!-- Project Details Go Here-->
-                                    <h2 class="text-uppercase">Project Name</h2>
-                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/02-full.jpg" alt="" />
-                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                                    <ul class="list-inline">
-                                        <li>Date: January 2020</li>
-                                        <li>Client: Explore</li>
-                                        <li>Category: Graphic Design</li>
-                                    </ul>
+                                    <h2 class="text-uppercase">Microcontroller</h2> <br/>
+<!--                                     <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p> -->
+                                    
+                                    <p> All of our software is written in C++ on an STM32F103C8 Blue Pill board which has a 32-bit CPU and an ARM Cortex M3 Microcontroller making it superior to Arduino boards. The blue pill is able to drive motors using PWM signals, receive analog inputs from our reflectance sensors using ADC pins, and receive digital inputs from our other sensors (sonars, encoders, digital reflectance sensor).</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/chipPinoutRevised.jpg" alt="" />
+                                    <br/><p> Pinout diagram made using KiCAD </p>
+                                    <br/>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/bluepill.jpg" alt="" />
+                                    <br/><p> We wired and soldered a PCB with our microcontroller, regulator circuit, encoder circuits, and reflectance sensor circuits. We placed the circuit in a alumminum lined box for shielding from electromagnetic noise and wired up a switch which turns on power to the microcontroller and the motor circuits simulataneously. </p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/electronicsBox.jpg" alt="" />
                                     <button class="btn btn-primary" data-dismiss="modal" type="button">
                                         <i class="fas fa-times mr-1"></i>
-                                        Close Project
+                                        Close
                                     </button>
                                 </div>
                             </div>
