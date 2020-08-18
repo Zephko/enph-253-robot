@@ -60,7 +60,7 @@
             	<h2 class="section-heading">The Challenge: RecycleBots</h2><br/>
                   <br/>
                   <p> Due to COVID-19, UBC was closed for the duration of this course. Students were required to purchase tools and fabricate all parts from home. All students created their own competition surface and competed in a livestreamed Zoom competition. </p>
-                  <br/><p> Our team of four was tasked to build 4 fully autonomous robots to find 6 cans on an 8' x 8' surface and place them in a recycling bin within 60 seconds. Bonus points are awarded for using an 8'' tall bin and picking up cans laying in differente orientations.<br/>
+                  <br/><p> Our team of four was tasked to build 4 fully autonomous robots to find 6 cans on an 8' x 8' surface and place them in a recycling bin within 60 seconds. Bonus points are awarded for using an 8'' tall bin and picking up cans laying in different orientations.<br/>
                     
             	<br/>
             	 A more detailed overview of the competition can be found <a href ="https://drive.google.com/file/d/1aBnhJHWy42Qeipwge74yzbYeO4VBq1NH/view">here</a>.<br/><br/>
@@ -463,7 +463,7 @@
                                     <br/><p> Pinout diagram made using KiCAD </p>
                                     <br/>
                                     <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/bluepill.jpg" alt="" />
-                                    <br/><p> We wired and soldered a PCB with our microcontroller, regulator circuit, encoder circuits, and reflectance sensor circuits. We placed the circuit in a alumminum lined box for shielding from electromagnetic noise and wired up a switch which turns on power to the microcontroller and the motor circuits simulataneously. </p>
+                                    <br/><p> We wired and soldered a PCB with our microcontroller, regulator circuit, encoder circuits, and reflectance sensor circuits. We placed the circuit in a aluminum lined box for shielding from electromagnetic noise and wired up a switch which turns on power to the microcontroller and the motor circuits simulataneously. </p>
                                     <img class="img-fluid d-block mx-auto" src="assets/img/electronicsBox.jpg" alt="" />
                                     <button class="btn btn-primary" data-dismiss="modal" type="button">
                                         <i class="fas fa-times mr-1"></i>
@@ -520,10 +520,11 @@
                                     <p class="item-intro text-muted">Reflectance Sensor Array.</p>
                                     
                                     <p>To follow black tape, we used an array of 5 reflectance sensors. Each reflectance sensor consists of a IR LED and a phototransistor which we can use to input an analog value into the MCU. Since there is a drastic difference in reflectance from black tape to a light-colored floor, we can determine whether or not a sensor is on black tape. </p>
-                                    </br><p> This is the circuit we use to feed analog values into the Blue Pill: </p>
-                                
+                                    </br> Using an array of sensors allows us to generate more position states of the robot relative to the tape. This helps us to tune our PID more easily and makes our robot much less likely to drift off of tape. </p>
                                     <img class="img-fluid d-block mx-auto" src="assets/img/tcrtArray.jpg" alt="" />
-                                
+                                    
+                                    </br><p> This is the circuit we use to feed analog values into the Blue Pill: </p>
+                                  
                                     <img class="img-fluid d-block mx-auto" src="assets/img/Tape sensor analog.jpg" alt="" />
                                 
                                 </br><p>To be sure we could make all the required turns we connected a digital tape sensor on the side of our robot which would read the small tabs of black tape at the corners of our tape path. When this sensor reads the black tape, our robot will execute a turn.</p>
@@ -531,7 +532,7 @@
                                 <img class="img-fluid d-block mx-auto" src="assets/img/surface.jpg" alt="" />
                                 <img class="img-fluid d-block mx-auto" src="assets/img/digi.jpg" alt="" />
                             
-                             </br><p> At this point we were out of ADC ports on the MCU so we made a comparator circuit to turn the analog values into a digital value by comparing it to a value set by a voltage divider. </p></br>
+                             </br><p> At this point we were out of ADC pins on the Blue Pill so we made a comparator circuit to turn the analog values into a digital value by comparing it to a value set by a voltage divider. </p></br>
                              <img class="img-fluid d-block mx-auto" src="assets/img/Tape sensor digital.jpg" alt="" />
                                     <button class="btn btn-primary" data-dismiss="modal" type="button">
                                         <i class="fas fa-times mr-1"></i>
@@ -557,9 +558,11 @@
                                     <h2 class="text-uppercase">Precision Driving</h2>
                                     <p class="item-intro text-muted">Photointerrupters and Motor Encoders</p>
                                     
-                                    <p>Early in our design cycle, we realized it was very difficult to make our robot drive perfectly straight or execute accurate pivots. The motors are controlled by analog values and their speeds are often affected by battery strength.
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/encoder.jpg" alt="" />
+                                    
+                                    <p>Early in our design cycle, we realized it was very difficult to make our robot drive perfectly straight (without tape) or execute accurate pivots. The motors are controlled by analog values and their speeds are often affected by battery strength.
                                     To move precisely, we installed photointerrupters and an encoder on the motor. By counting the pulses from the photointerrupters we are able to determine how much each wheel has turned. This allows us to pivot accurately, drive forward off of tape, and back up the same amount.</p>
-                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/encoder.jpg" alt="" />
+                                    
 
                                     <button class="btn btn-primary" data-dismiss="modal" type="button">
                                         <i class="fas fa-times mr-1"></i>
