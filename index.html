@@ -592,14 +592,14 @@
                                     </br><p>The idea behind this feature is to be able to navigate towards an IR LED that is pulsing at 1kHz. We chose to detect an oscillating signal so that we can distinguish the presence of IR signal from ambient light in the room</p>
                                 
                                     </br><p>To find the beacon we built a circuit with a phototransistor that receives the signal, amplifies it, AC couples, and steps down the voltage to below 3.3V to be safely input to the Blue Pill.</p>
-                                    </br><p> This is the circuit we designed and built for this application.</p>
-                                    <img class="img-fluid d-block mx-auto" src="assets/img/irCircuit.jpg" alt="" />
+                                    </br><p> This is the circuit we designed and built for this application, drawn in KiCAD.</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/IRcircuitKicad.jpg" alt="" />
                                     <img class="img-fluid d-block mx-auto" src="assets/img/irDetect1.jpg" alt="" />
                         
                         </br> <p> Once the analog signal enters the Blue Pill, we wrote software to process the signal. We used a cross-correlation algorithm which outputs a value indicating how closely the analog signal matches a 1kHz reference wave. 
                     Code for this specific application can be viewed <a href ="https://github.com/Zephko/cross-correlation-IR">here</a></p>
                     
-                    <p>This is the circuit we designed to create an 1kHz IR Beacon</p>
+                    <p>This is the circuit we designed to create an 1kHz IR Beacon.</p>
                     <img class="img-fluid d-block mx-auto" src="assets/img/beaconCircuit.jpg" alt="" />
 
                                     <button class="btn btn-primary" data-dismiss="modal" type="button">
