@@ -491,7 +491,7 @@
                                     
                                     <p> This is the H-bridge circuit we designed for driving both wheels in either direction. The design features optocouplers so that the noise from the motors will not effect the sensitive microcontroller. PWM outputs from the MCU are optocoupled and then amplified through a gate driver to drive the motors.</p>
                                     <br/><p>This schematic shows the setup for one motor. The full circuit we built has a second motor which shares the same gate driver.</p>
-                                    <img class="img-fluid d-block mx-auto" src="assets/img/hbridge.jpg" alt="" />
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/hbridgeSchematic.jpg" alt="" />
                                     <br/><p>This circuit was soldered onto a board and secured onto the bottom of the chassis. </p>
                                     <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/bridge2.jpg" alt="" />
 
@@ -593,7 +593,7 @@
                                 
                                     </br><p>To find the beacon we built a circuit with a phototransistor that receives the signal, amplifies it, AC couples, and steps down the voltage to below 3.3V to be safely input to the Blue Pill.</p>
                                     </br><p> This is the circuit we designed and built for this application, drawn in Altium.</p>
-                                    <img class="img-fluid" src="assets/img/irDetectSchematic.jpg" alt="" />
+                                    <img class="img-fluid" src="assets/img/portfolio/irDetectSchematic.jpg" alt="" />
                                     <img class="img-fluid" src="assets/img/irDetect1.jpg" alt="" />
                         
                         </br> <p> Once the analog signal enters the Blue Pill, we wrote software to process the signal. We used a cross-correlation algorithm which outputs a value indicating how closely the analog signal matches a 1kHz reference wave. 
